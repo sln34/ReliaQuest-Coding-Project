@@ -9,102 +9,55 @@ import java.util.UUID;
  */
 public interface Employee {
 
-    private UUID uuid;
-    private String firstName;
-    private String lastName;
-    private String fullName;
-    private Integer salary;
-    private Integer age;
-    private String jobTitle;
-    private String email;
-    private Instant hired;
-    private Instant fired;
 
-    UUID getUuid() {
-        return uuid;
-    }
+
+    UUID getUuid();
 
     /**
      * Set by either the Service or Data layer.
      * @param uuid required non-null
      */
-    void setUuid(UUID uuid) {
-        this.uuid = uuid;
-    }
+    void setUuid(UUID uuid);
 
-    String getFirstName(){
-        return firstName;
-    }
+    String getFirstName();
 
-    void setFirstName(String name){
-        this.name = firstName;
-    }
+    void setFirstName(String name);
 
-    String getLastName(){
-        return lastName;
-    }
+    String getLastName();
 
-    void setLastName(String name){
-        this.name = lastName;
-    }
+    void setLastName(String name);
 
-    String getFullName(){
-        return fullName;
-    }
+    String getFullName();
 
-    void setFullName(String name){
-        this.name = fullName;
-    }
 
-    Integer getSalary(){
-        return salary;
-    }
 
-    void setSalary(Integer salary){
-        this.salary = salary;
-    }
+    void setFullName(String name);
 
-    Integer getAge(){
-        return age;
-    }
+    Integer getSalary();
 
-    void setAge(Integer age){
-        this.age = age;
-    }
+    void setSalary(Integer salary);
 
-    String getJobTitle(){
-        return jobTitle;
-    }
+    Integer getAge();
 
-    void setJobTitle(String jobTitle){
-        this.jobTitle = jobTitle;
-    }
+    void setAge(Integer age);
 
-    String getEmail(){
-        return email;
-    }
+    String getJobTitle();
 
-    void setEmail(String email){
-        this.email = email;
-    }
+    void setJobTitle(String jobTitle);
 
-    Instant getContractHireDate(){
-        return hired;
-    }
+    String getEmail();
 
-    void setContractHireDate(Instant date){
-        this.date = hired;
-    }
+    void setEmail(String email);
+
+    Instant getContractHireDate();
+
+    void setContractHireDate(Instant date);
 
     /**
      * Nullable.
      * @return null, if Employee has not been terminated.
      */
-    Instant getContractTerminationDate(){
-        return fired;
-    }
+    Instant getContractTerminationDate();
 
-    void setContractTerminationDate(Instant date){
-        this.date = fired;
-    }
+    void setContractTerminationDate(Instant date);
 }
