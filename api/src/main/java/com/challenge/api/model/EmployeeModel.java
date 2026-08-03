@@ -33,7 +33,7 @@ public class EmployeeModel implements Employee {
     }
 
      public void setFirstName(String name){
-        this.name = firstName;
+        this.fistName = name;
     }
 
     public String getLastName(){
@@ -49,7 +49,7 @@ public class EmployeeModel implements Employee {
     }
 
      public void setFullName(String name){
-        this.name = fullName;
+        this.fullName = name;
     }
 
      public Integer getSalary(){
@@ -89,7 +89,7 @@ public class EmployeeModel implements Employee {
     }
 
      public void setContractHireDate(Instant date){
-        this.date = hired;
+        this.hired = date;
     }
 
     /**
@@ -101,6 +101,6 @@ public class EmployeeModel implements Employee {
     }
 
      public void setContractTerminationDate(Instant date){
-        this.date = fired;
+        this.fired = date;
     }
 }
