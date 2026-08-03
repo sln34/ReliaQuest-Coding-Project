@@ -2,6 +2,7 @@ package com.challenge.api.controller;
 
 import com.challenge.api.model.Employee;
 import com.challenge.api.service.EmployeeService;
+import com.challenge.api.model.EmployeeCreate;
 import java.util.List;
 import java.util.UUID;
 import org.springframework.http.HttpStatus;
@@ -10,6 +11,8 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.PostMapping;
 
 
 /**
@@ -57,8 +60,8 @@ public class EmployeeController {
      * @param requestBody hint!
      * @return Newly created Employee
      */
-
-    public Employee createEmployee(Object requestBody) {
-        throw new ResponseStatusException(HttpStatus.NOT_IMPLEMENTED);
+    @PostMapping
+    public Employee createEmployee(@RequestBody EmployeeCreate requestBody) {
+        return employeeService.createEmployee(requestBody);
     }
 }

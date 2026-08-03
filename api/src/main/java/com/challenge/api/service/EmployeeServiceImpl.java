@@ -7,6 +7,7 @@ import java.time.Instant;
 import java.util.ArrayList;
 import com.challenge.api.model.Employee;
 import com.challenge.api.model.EmployeeModel;
+import com.challenge.api.model.EmployeeCreate;
 
 @Service
 public class EmployeeServiceImpl implements EmployeeService {
@@ -55,6 +56,23 @@ public class EmployeeServiceImpl implements EmployeeService {
 
         }
         return null;
+    }
+
+    @Override
+    public Employee createEmployee(EmployeeCreate input) {
+
+        EmployeeModel employee = new EmployeeModel();
+        employee.setUuid(UUID.randomUUID());
+        employee.setFirstName(input.getFirstName());
+        employee.setLastName(input.getLastName());
+        employee.setFullName(input.getFirstName() + " " + input.getLastName());
+        employee.setJobTitle(input.getJobTitle());
+        employee.setSalary(input.getSalary());
+        employee.setAge(input.getAge());
+        employee.setEmail(input.getEmail());
+        employee.setContractHireDate(input.getContractHireDate());
+        employees.add(employee);
+        return employee;
     }
 
 }
