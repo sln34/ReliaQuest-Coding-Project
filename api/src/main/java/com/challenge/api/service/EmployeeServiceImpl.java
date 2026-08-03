@@ -42,8 +42,19 @@ public class EmployeeServiceImpl implements EmployeeService {
 
     }
 
-    @Overide //optional
+    @Override //optional
     public List<Employee> getAllEmployees() {
         return employees;
     }
+
+    public Employee getEmployeeByUuid(UUID uuid){
+        for (int i = 0; i < employees.size(); i++) {
+            if (employees.get(i).getUuid().equals(uuid)) {
+                return employees.get(i);
+            }
+
+        }
+        return null;
+    }
+
 }

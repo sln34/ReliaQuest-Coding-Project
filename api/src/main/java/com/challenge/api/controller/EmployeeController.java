@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 
 
 /**
@@ -38,10 +39,16 @@ public class EmployeeController {
      * @param uuid Employee UUID
      * @return Requested Employee if exists
      */
+    @GetMapping("/{uuid}")
+    public Employee getEmployeeByUuid(@PathVariable UUID uuid) {
 
-    public Employee getEmployeeByUuid(UUID uuid) {
-
-        throw new ResponseStatusException(HttpStatus.NOT_IMPLEMENTED);
+        Employee employee = employeeService.getEmployeeByUuid(uuid);
+        if (employee == null) {
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "ERROR NO UUID MATCHES");
+        }
+        else {
+            return employee;
+        }
 
     }
 

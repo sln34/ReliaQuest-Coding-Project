@@ -1,0 +1,9 @@
+HTTP/1.1 404 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Mon, 03 Aug 2026 03:38:17 GMT
+
+{"timestamp":"2026-08-03T03:38:17.960+00:00","status":404,"error":"Not Found","path":"/api/v1/employee/"}
