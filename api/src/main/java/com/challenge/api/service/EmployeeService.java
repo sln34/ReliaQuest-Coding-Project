@@ -1,15 +1,15 @@
 package com.challenge.api.service;
 
-import java.util.List;
-import java.util.UUID;
 import com.challenge.api.model.Employee;
 import com.challenge.api.model.EmployeeCreate;
+import java.util.List;
+import java.util.UUID;
 
 public interface EmployeeService {
 
-     List<Employee> getAllEmployees();
+    List<Employee> getAllEmployees();
 
-     Employee getEmployeeByUuid(UUID uuid);
+    Employee getEmployeeByUuid(UUID uuid);
 
-     Employee createEmployee(EmployeeCreate input);
+    Employee createEmployee(EmployeeCreate input);
 }

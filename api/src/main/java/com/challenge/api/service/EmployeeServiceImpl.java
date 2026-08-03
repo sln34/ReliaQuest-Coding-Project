@@ -1,13 +1,13 @@
 package com.challenge.api.service;
-import org.springframework.stereotype.Service;
 
-import java.util.List;
-import java.util.UUID;
+import com.challenge.api.model.Employee;
+import com.challenge.api.model.EmployeeCreate;
+import com.challenge.api.model.EmployeeModel;
 import java.time.Instant;
 import java.util.ArrayList;
-import com.challenge.api.model.Employee;
-import com.challenge.api.model.EmployeeModel;
-import com.challenge.api.model.EmployeeCreate;
+import java.util.List;
+import java.util.UUID;
+import org.springframework.stereotype.Service;
 
 @Service
 public class EmployeeServiceImpl implements EmployeeService {
@@ -40,20 +40,19 @@ public class EmployeeServiceImpl implements EmployeeService {
         employee2.setEmail("bg2233@company.com");
         employee2.setContractHireDate(Instant.now());
         employees.add(employee2);
-
     }
 
-    @Override //optional
+    @Override // optional
     public List<Employee> getAllEmployees() {
         return employees;
     }
 
-    public Employee getEmployeeByUuid(UUID uuid){
+    @Override
+    public Employee getEmployeeByUuid(UUID uuid) {
         for (int i = 0; i < employees.size(); i++) {
             if (employees.get(i).getUuid().equals(uuid)) {
                 return employees.get(i);
             }
-
         }
         return null;
     }
@@ -74,5 +73,4 @@ public class EmployeeServiceImpl implements EmployeeService {
         employees.add(employee);
         return employee;
     }
-
 }

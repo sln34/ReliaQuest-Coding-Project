@@ -16,84 +16,83 @@ public class EmployeeModel implements Employee {
     private Instant hired;
     private Instant fired;
 
-     public UUID getUuid() {
+    public UUID getUuid() {
         return uuid;
     }
 
-     public void setUuid(UUID uuid) {
+    public void setUuid(UUID uuid) {
         this.uuid = uuid;
     }
 
-     public String getFirstName(){
+    public String getFirstName() {
         return firstName;
     }
 
-     public void setFirstName(String name){
+    public void setFirstName(String name) {
         this.firstName = name;
     }
 
-    public String getLastName(){
+    public String getLastName() {
         return lastName;
     }
 
-    public void setLastName(String name){
+    public void setLastName(String name) {
         this.lastName = name;
     }
 
-    public String getFullName(){
+    public String getFullName() {
         return fullName;
     }
 
-     public void setFullName(String name){
+    public void setFullName(String name) {
         this.fullName = name;
     }
 
-     public Integer getSalary(){
+    public Integer getSalary() {
         return salary;
     }
 
-     public void setSalary(Integer salary){
+    public void setSalary(Integer salary) {
         this.salary = salary;
     }
 
-     public Integer getAge(){
+    public Integer getAge() {
         return age;
     }
 
-     public void setAge(Integer age){
+    public void setAge(Integer age) {
         this.age = age;
     }
 
-    public String getJobTitle(){
+    public String getJobTitle() {
         return jobTitle;
     }
 
-    public void setJobTitle(String jobTitle){
+    public void setJobTitle(String jobTitle) {
         this.jobTitle = jobTitle;
     }
 
-     public String getEmail(){
+    public String getEmail() {
         return email;
     }
 
-     public void setEmail(String email){
+    public void setEmail(String email) {
         this.email = email;
     }
 
-    public Instant getContractHireDate(){
+    public Instant getContractHireDate() {
         return hired;
     }
 
-     public void setContractHireDate(Instant date){
+    public void setContractHireDate(Instant date) {
         this.hired = date;
     }
 
-
-     public Instant getContractTerminationDate(){
+    public Instant getContractTerminationDate() {
         return fired;
     }
 
-     public void setContractTerminationDate(Instant date){
+    public void setContractTerminationDate(Instant date) {
         this.fired = date;
     }
 }

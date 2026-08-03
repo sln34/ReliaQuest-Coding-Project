@@ -9,8 +9,6 @@ import java.util.UUID;
  */
 public interface Employee {
 
-
-
     UUID getUuid();
 
     /**
@@ -28,8 +26,6 @@ public interface Employee {
     void setLastName(String name);
 
     String getFullName();
-
-
 
     void setFullName(String name);
 
