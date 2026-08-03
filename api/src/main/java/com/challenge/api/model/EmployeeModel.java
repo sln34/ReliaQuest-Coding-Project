@@ -33,7 +33,7 @@ public class EmployeeModel implements Employee {
     }
 
      public void setFirstName(String name){
-        this.fistName = name;
+        this.firstName = name;
     }
 
     public String getLastName(){
@@ -41,7 +41,7 @@ public class EmployeeModel implements Employee {
     }
 
     public void setLastName(String name){
-        this.name = lastName;
+        this.lastName = name;
     }
 
     public String getFullName(){
